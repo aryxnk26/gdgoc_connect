@@ -9,11 +9,11 @@ class EventCard extends StatelessWidget {
   final VoidCallback onToggleRegister;
 
   const EventCard({
-    Key? key,
+    super.key,
     required this.event,
     required this.onTap,
     required this.onToggleRegister,
-  }) : super(key: key);
+  });
 
   String _formatDate(DateTime dt) {
     const months = [
@@ -94,7 +94,7 @@ class EventCard extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 12,
-                        backgroundColor: AppTheme.googleBlue.withOpacity(0.2),
+                        backgroundColor: AppTheme.googleBlue.withValues(alpha: 0.2),
                         child: const Icon(Icons.person, size: 14, color: AppTheme.googleBlue),
                       ),
                       const SizedBox(width: 8),

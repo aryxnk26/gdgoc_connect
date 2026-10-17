@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../models/event.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/status_badge.dart';
@@ -7,7 +6,7 @@ import '../../widgets/status_badge.dart';
 class EventDetailsScreen extends StatelessWidget {
   final String eventId;
 
-  const EventDetailsScreen({Key? key, required this.eventId}) : super(key: key);
+  const EventDetailsScreen({super.key, required this.eventId});
 
   String _formatFullDate(DateTime dt) {
     const months = [
@@ -99,7 +98,7 @@ class EventDetailsScreen extends StatelessWidget {
               child: const Row(
                 children: [
                   Icon(Icons.lightbulb_outline, color: Colors.orange),
-                  const SizedBox(width: 12),
+                  SizedBox(width: 12),
                   Expanded(
                     child: Text(
                       'Remember to bring your laptop and campus student ID for workshop accreditation.',

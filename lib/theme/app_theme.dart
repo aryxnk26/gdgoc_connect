@@ -32,7 +32,7 @@ class AppTheme {
         color: Color(0xFF202124),
       ),
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       elevation: 0.5,
       color: Colors.white,
       shape: RoundedRectangleBorder(
@@ -43,9 +43,9 @@ class AppTheme {
     navigationBarTheme: NavigationBarThemeData(
       elevation: 3,
       backgroundColor: Colors.white,
-      indicatorColor: googleBlue.withOpacity(0.12),
-      labelTextStyle: MaterialStateProperty.resolveWith((states) {
-        if (states.contains(MaterialState.selected)) {
+      indicatorColor: googleBlue.withValues(alpha: 0.12),
+      labelTextStyle: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
           return const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w600,

@@ -4,7 +4,7 @@ import '../../theme/app_theme.dart';
 import '../../widgets/section_header.dart';
 
 class CommunityScreen extends StatelessWidget {
-  const CommunityScreen({Key? key}) : super(key: key);
+  const CommunityScreen({super.key});
 
   void _confirmSignOut(BuildContext context, AppState state) {
     showDialog(
@@ -95,7 +95,7 @@ class CommunityScreen extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                 child: ListTile(
                   leading: CircleAvatar(
-                    backgroundColor: AppTheme.googleBlue.withOpacity(0.15),
+                    backgroundColor: AppTheme.googleBlue.withValues(alpha: 0.15),
                     child: Text(
                       member.initials,
                       style: const TextStyle(color: AppTheme.googleBlue, fontWeight: FontWeight.bold),

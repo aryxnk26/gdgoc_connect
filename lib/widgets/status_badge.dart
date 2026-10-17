@@ -9,11 +9,11 @@ class StatusBadge extends StatelessWidget {
   final Color textColor;
 
   const StatusBadge({
-    Key? key,
+    super.key,
     required this.label,
     required this.backgroundColor,
     required this.textColor,
-  }) : super(key: key);
+  });
 
   factory StatusBadge.fromCategory(EventCategory category) {
     switch (category) {

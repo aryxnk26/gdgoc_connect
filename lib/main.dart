@@ -10,7 +10,7 @@ void main() {
 }
 
 class GDGoCConnectRoot extends StatefulWidget {
-  const GDGoCConnectRoot({Key? key}) : super(key: key);
+  const GDGoCConnectRoot({super.key});
 
   @override
   State<GDGoCConnectRoot> createState() => _GDGoCConnectRootState();
@@ -46,7 +46,7 @@ class _GDGoCConnectRootState extends State<GDGoCConnectRoot> {
 }
 
 class AuthGate extends StatelessWidget {
-  const AuthGate({Key? key}) : super(key: key);
+  const AuthGate({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../models/event.dart';
 import '../../state/app_state.dart';
+import '../../widgets/action_chip_button.dart';
 import '../../widgets/event_card.dart';
 import 'event_details_screen.dart';
 
 class EventsScreen extends StatefulWidget {
-  const EventsScreen({Key? key}) : super(key: key);
+  const EventsScreen({super.key});
 
   @override
   State<EventsScreen> createState() => _EventsScreenState();
@@ -116,8 +117,8 @@ class _EventsScreenState extends State<EventsScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         children: [
-          FilterChip(
-            label: const Text('All'),
+          ActionChipButton(
+            label: 'All',
             selected: _selectedCategory == null,
             onSelected: (_) => setState(() => _selectedCategory = null),
           ),
@@ -126,8 +127,8 @@ class _EventsScreenState extends State<EventsScreen> {
             final isSelected = _selectedCategory == cat;
             return Padding(
               padding: const EdgeInsets.only(right: 8.0),
-              child: FilterChip(
-                label: Text(cat.name.toUpperCase()),
+              child: ActionChipButton(
+                label: cat.name.toUpperCase(),
                 selected: isSelected,
                 onSelected: (selected) {
                   setState(() {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../models/announcement.dart';
-import '../../models/event.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/event_card.dart';
@@ -10,7 +9,7 @@ import '../events/event_details_screen.dart';
 class HomeDashboardScreen extends StatelessWidget {
   final ValueChanged<int> onNavigateTab;
 
-  const HomeDashboardScreen({Key? key, required this.onNavigateTab}) : super(key: key);
+  const HomeDashboardScreen({super.key, required this.onNavigateTab});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class HomeDashboardScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(
-                color: AppTheme.googleBlue.withOpacity(0.12),
+                color: AppTheme.googleBlue.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: const Icon(Icons.hub_outlined, color: AppTheme.googleBlue, size: 20),
@@ -105,7 +104,7 @@ class HomeDashboardScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.blue.withOpacity(0.18),
+            color: Colors.blue.withValues(alpha: 0.18),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -126,7 +125,7 @@ class HomeDashboardScreen extends StatelessWidget {
           Text(
             'Role: ${state.userRole}',
             style: TextStyle(
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
               fontSize: 13,
             ),
           ),
@@ -190,7 +189,7 @@ class HomeDashboardScreen extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 18,
-              backgroundColor: color.withOpacity(0.12),
+              backgroundColor: color.withValues(alpha: 0.12),
               child: Icon(icon, color: color, size: 20),
             ),
             const SizedBox(width: 12),

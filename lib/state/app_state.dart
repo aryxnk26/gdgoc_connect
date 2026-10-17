@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import '../data/mock_data.dart';
 import '../models/announcement.dart';
 import '../models/event.dart';
 import '../models/task.dart';
 import '../models/team_member.dart';
+
+class MockData {
+  static List<Event> get initialEvents => const [];
+  static List<CommunityTask> get initialTasks => const [];
+  static List<Announcement> get initialAnnouncements => const [];
+  static List<TeamMember> get teamMembers => const [];
+}
 
 class AppState extends ChangeNotifier {
   // Authentication Demo State
@@ -84,10 +90,10 @@ class AppState extends ChangeNotifier {
 // InheritedProvider to supply AppState down the widget tree without external packages
 class AppStateScope extends InheritedNotifier<AppState> {
   const AppStateScope({
-    Key? key,
-    required AppState notifier,
-    required Widget child,
-  }) : super(key: key, notifier: notifier, child: child);
+    super.key,
+    required AppState super.notifier,
+    required super.child,
+  });
 
   static AppState of(BuildContext context) {
     final scope = context.dependOnInheritedWidgetOfExactType<AppStateScope>();

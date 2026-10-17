@@ -1,6 +1,6 @@
+import '../models/announcement.dart';
 import '../models/event.dart';
 import '../models/task.dart';
-import '../models/announcement.dart';
 import '../models/team_member.dart';
 
 class MockData {

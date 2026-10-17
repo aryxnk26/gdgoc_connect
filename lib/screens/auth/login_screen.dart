@@ -3,7 +3,7 @@ import '../../state/app_state.dart';
 import '../../theme/app_theme.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -76,14 +76,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: AppTheme.googleBlue.withOpacity(0.08),
+                    color: AppTheme.googleBlue.withValues(alpha: 0.08),
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: AppTheme.googleBlue.withOpacity(0.2)),
+                    border: Border.all(color: AppTheme.googleBlue.withValues(alpha: 0.2)),
                   ),
                   child: const Row(
                     children: [
                       Icon(Icons.info_outline, color: AppTheme.googleBlue, size: 20),
-                      const SizedBox(width: 10),
+                      SizedBox(width: 10),
                       Expanded(
                         child: Text(
                           'Demo Mode: Simulated sign-in with local state. No real backend or Google Account required.',
@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 16),
 
                 DropdownButtonFormField<String>(
-                  value: _selectedRole,
+                  initialValue: _selectedRole,
                   decoration: InputDecoration(
                     labelText: 'Community Role',
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),

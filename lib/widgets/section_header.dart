@@ -6,11 +6,11 @@ class SectionHeader extends StatelessWidget {
   final VoidCallback? onActionPressed;
 
   const SectionHeader({
-    Key? key,
+    super.key,
     required this.title,
     this.actionLabel,
     this.onActionPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'home/home_dashboard_screen.dart';
 import 'tasks/tasks_screen.dart';
 
 class MainNavigationShell extends StatefulWidget {
-  const MainNavigationShell({Key? key}) : super(key: key);
+  const MainNavigationShell({super.key});
 
   @override
   State<MainNavigationShell> createState() => _MainNavigationShellState();
